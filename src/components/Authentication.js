@@ -48,7 +48,7 @@ function App() {
         <a
           href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
         >
-          <h3>Login to Spotify</h3>
+          <h4>Login to Spotify</h4>
         </a>
       ) : (
         <button onClick={logout}>Logout</button>

@@ -1,6 +1,7 @@
 import React from "react";
 import Stopwatch from "./Stopwatch";
 import Aunthentication from "./Authentication";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

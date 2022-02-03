@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-/*import './App.css';*/
+/*import "./App.css";*/
 
 function App() {
   const CLIENT_ID = "27d94f3bea17489aaff2d53dc9f31772";
@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="Music">
       <iframe
         src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS?theme=0"
         width="100%"
@@ -41,13 +41,14 @@ function App() {
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"
+        title="myMusic"
       ></iframe>
 
       {!token ? (
         <a
           href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
         >
-          Login to Spotify
+          <h3>Login to Spotify</h3>
         </a>
       ) : (
         <button onClick={logout}>Logout</button>

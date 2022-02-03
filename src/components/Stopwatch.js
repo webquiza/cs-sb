@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+/*import "./App.css";*/
 
 const App = () => {
   const [time, setTime] = React.useState(0);
@@ -22,7 +22,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div className="Timers">
-        <h2>Soundbreak</h2>
+        <h1>Soundbreak</h1>
         <div id="display">
           <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
           <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>

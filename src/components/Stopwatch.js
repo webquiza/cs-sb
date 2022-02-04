@@ -1,5 +1,5 @@
 import React from "react";
-/*import "./App.css";*/
+import "./App.css";
 
 const App = () => {
   const [time, setTime] = React.useState(0);
@@ -21,24 +21,50 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <div className="Timers">
+      <div className="Watch">
         <h1>Soundbreak</h1>
         <div id="display">
           <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-          <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-          <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+          <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+          {/*<span>{("0" + ((time / 10) % 100)).slice(-2)}</span>*/}
         </div>
 
-        <div id="buttons">
+        <div>
           {!timerOn && time === 0 && (
-            <button onClick={() => setTimerOn(true)}>Start</button>
+            <button
+              type="button"
+              class="btn btn-dark"
+              onClick={() => setTimerOn(true)}
+            >
+              Start
+            </button>
           )}
-          {timerOn && <button onClick={() => setTimerOn(false)}>Stop</button>}
-          {!timerOn && time > 0 && (
-            <button onClick={() => setTime(0)}>Reset</button>
+          {timerOn && (
+            <button
+              type="button"
+              class="btn btn-dark"
+              onClick={() => setTimerOn(false)}
+            >
+              Stop
+            </button>
           )}
           {!timerOn && time > 0 && (
-            <button onClick={() => setTimerOn(true)}>Resume</button>
+            <button
+              type="button"
+              class="btn btn-dark"
+              onClick={() => setTime(0)}
+            >
+              Reset
+            </button>
+          )}
+          {!timerOn && time > 0 && (
+            <button
+              type="button"
+              class="btn btn-dark"
+              onClick={() => setTimerOn(true)}
+            >
+              Resume
+            </button>
           )}
         </div>
       </div>

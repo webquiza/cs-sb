@@ -23,6 +23,7 @@ const App = () => {
     <React.Fragment>
       <div className="Watch">
         <h1>Soundbreak</h1>
+        <h6>By Carlos Urquiza</h6>
         <div id="display">
           <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
           <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>

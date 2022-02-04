@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const CLIENT_ID = "27d94f3bea17489aaff2d53dc9f31772";
-  const REDIRECT_URI = "http://localhost:3000";
+  const REDIRECT_URI = "https://soundbreak-io.firebaseapp.com";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
